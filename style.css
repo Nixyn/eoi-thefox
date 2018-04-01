@@ -474,8 +474,52 @@ h1 span {
 }
 
 .footer__copyright {
+  grid-column: 2/4;
+  grid-row: 2;
   height: 70px;
-  background-color: #222533;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer{
+  padding: 30px 0 0 0;
+  background-color: #222533;  
+}
+
+.footer{
+  grid-column: 2/4;  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+.footer__h2{
+  border-left: 5px solid #1abc9c;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  padding: 0 15px;
+  letter-spacing: 1px;
+  
+}
+
+.footer__h2-thefox{
+  color: white;
+  font-size: 4rem;
+  font-weight: 900; 
+  
+}
+
+.list-footer{
+  border-bottom: 1px solid #3f4150;
+  color: #a1b1bc;
+  padding: 20px 0;
+}
+
+.footer__h2-thefox span{
+  color: #1abc9c;
 }
 
 /* /////////////////////////////// MISCELANEUS //////////////////////////////// */
