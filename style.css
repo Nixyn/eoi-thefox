@@ -1,0 +1,509 @@
+/* /////////////////////////////////// GLOBAL /////////////////////////////////// */
+* {
+  box-sizing: content-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: #a1b1bc;
+  font-family: "Lato", sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 585px)) 1fr;
+}
+
+/* ////////////////////////////////// MAIN //////////////////////////////////// */
+/* ____________________________: Nav & Menu Aspects :__________________________ */
+nav {
+  height: 100px;
+}
+
+.nav-content {
+  grid-column: 2/4;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.top-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.top-menu li {
+  margin-left: 28px;
+  cursor: pointer;
+}
+
+.top-menu a {
+  color: #435160;
+  text-decoration: none;
+}
+
+.top-menu a:hover {
+  color: #1abc9c;
+}
+
+/* [TODO] add active class and check performance */
+.active a {
+  height: 100px;
+  line-height: 97px;
+  color: #1abc9c;
+  border-top: 3px solid #1abc9c;
+  display: inline-block;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  background: url("icon-nav.png");
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.icon--search {
+  background-position-y: -30px;
+}
+
+/* _____________________________: Header Section :_____________________________ */
+header {
+  height: 900px;
+  background: url("header.jpg");
+  background-position: right;
+}
+
+/* _____________________________: Welcome Section :____________________________ */
+.welcome {
+  padding: 100px 20px;
+}
+
+.welcome-content {
+  grid-column: 2;
+}
+
+.selects-features {
+  grid-column: 3;
+}
+
+/* ______________________________: Works Section :_____________________________ */
+.works {
+  padding: 100px 0;
+  background-color: #f9fafb;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-card-container {
+  max-width: 1200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-card {
+  width: 390px;
+  border: 1px solid #e9e9e9;
+}
+
+.work-card:hover .work-card__header {
+  background-color: #a1b1bc;
+  color: white;
+}
+
+.work-card:hover h3 {
+  color: white;
+}
+
+.work-card:hover .work-card__img {
+  background-color: #222533;
+}
+
+.work-card__header {
+  height: 50px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.work-card__img {
+  height: 200px;
+  background-color: #a1b1bc;
+}
+
+.work-card__favs {
+  font-size: 1.7rem;
+}
+/* ______________________________: Why Us Aspects :____________________________ */
+.why-us {
+  padding: 100px 20px;
+}
+
+.why-us-content {
+  grid-column: 2;
+}
+
+.why-us img {
+  width: 95%;
+  grid-column: 3;
+}
+
+/* ___________________________: Data Numbers Aspects :_________________________ */
+.data-numbers {
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  background: palegreen;
+}
+
+.data-number:nth-child(even) {
+  background-color: #1ad5b0;
+}
+
+.data-number:nth-child(odd) {
+  background-color: #20caa8;
+}
+
+.data-number{
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.data-number__name{
+  font-size: 1.2rem;  
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.data-number__number{
+  font-size: 2.3rem;  
+  font-weight: 300;
+  letter-spacing: 8px;  
+}
+
+.data-number:hover{
+  background-color: #2c3e50;
+}
+
+/* _____________________________: Comments Aspects :___________________________ */
+.comments {
+  padding: 100px 20px;
+  display: grid;
+  grid-template-rows: auto 1fr
+}
+
+.comments__header {
+  grid-column: 2/4;
+  grid-row: 1;  
+  flex-flow: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comments-container{
+  grid-column: 2/4;
+  grid-row: 2;    
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment{
+  width: 570px;
+  height: 210px;
+  display: flex;
+  background-color: #f9fafb;
+  border-radius: 5px;
+  border: 1px solid #e9e9e9;  
+  padding: 30px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+
+.comment__img{
+  width: 103px;
+  height: 103px;
+  border-radius: 50%;
+  border: 1px solid #e9e9e9; 
+  margin-right: 20px;
+}
+
+.comment__img img{
+  width: 95px;
+  height: 95px;
+  border: 4px solid white;   
+  border-radius: 50%;
+}
+
+.comment:hover .comment__img{
+  background-color: #2c3e50;
+  border: 1px solid #2c3e50; 
+  box-shadow: inset 0 0 0 4px #2c3e50;  
+}
+
+.comment__content{
+  width: 400px;
+}
+
+.comment__username{
+  color: #2c3e50;
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.comment__paragraph{
+  margin-top: 20px;
+}
+
+/* _____________________________: Sponsor Aspects :____________________________ */
+.sponsor {
+  height: 150px;
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.sponsor-container{
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+}
+
+.brand{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand img{
+  width: 85%;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.brand img:hover{
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+/* _______________________________: Map Aspects :______________________________ */
+.map {
+  height: 500px;
+  background-color: gray;
+}
+
+/* ____________________________: Contact Us Aspects :__________________________ */
+.contact-us {
+  padding: 100px 20px;
+}
+
+.contact-us-content{
+  grid-column: 2;
+}
+
+.contact-us-form{
+  grid-column: 3;
+}
+
+.contact-us__social-btns{
+  font-size: 2rem;
+  color: #686d80;
+}
+
+.contact-us__social-btns i{
+  margin-right: 25px; 
+  cursor: pointer;
+}
+
+.contact-us__social-btns i:hover{
+  color: #1abc9c;
+}
+
+/* _______________________________: Blog Aspects :_____________________________ */
+.blog {
+  height: 280px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.blog__article{
+  background-color: #878a9279;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.blog__article img{
+  height: 280px;
+  position: relative;
+  z-index: -1;
+}
+
+.blog__footer{
+  height: 100px;
+  margin-top: -280px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  top: 180px;
+}
+
+.blog__title{
+  font-size: 1.3rem;
+}
+
+.blog__date{
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.blog__article:hover{
+  background-color: #878a9200;
+}
+
+.blog__article:hover .blog__footer{
+  background-color: #252937ad;
+}
+
+.blog__article:hover .blog__title{
+  color: #17e2ba;
+}
+
+.purchase {
+  height: 500px;
+  background-image: url('http://cdn.thefoxwp.com/wp-content/uploads/2014/12/purchase3.jpg');
+  background-position: center;  
+  border-top: 1px solid white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.purchase h2,.purchase h3 {
+  color: white;
+}
+
+.footer__copyright {
+  height: 70px;
+  background-color: #222533;
+}
+
+/* /////////////////////////////// MISCELANEUS //////////////////////////////// */
+/* ______________________________: Titles Aspects :____________________________ */
+h2 {
+  font-size: 2.7rem;
+  font-weight: 300;
+  color: #2c3e50;
+}
+
+h3 {
+  font-weight: 700;
+  color: #2c3e50;
+}
+/* ______________________________: Select Aspects :____________________________ */
+select {
+  max-width: 570px;
+  padding: 15px 40px 15px 20px;
+  border: 1px solid #eceef0;
+  border-radius: 2px;
+  font-weight: 700;
+  color: #2c3e50;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* remove default arrow */
+  cursor: pointer;
+  background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right;
+}
+
+/* ______________________________: Button Aspects :____________________________ */
+.btn {
+  display: inline-block;
+  padding: 18px 25px;
+  margin: 10px 0;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 3px;
+  box-shadow: 0 3px #81919b;
+  background-color: #a1b1bc;
+}
+
+/* [TODO] kill -> box-shadow: 0 0 rgba(0, 0, 0, 0); */
+.btn--buy {
+  padding: 25px 50px;
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+  background-color: #1a1c27;
+}
+
+.btn--purchase {
+  padding: 15px 20px;
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid white;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+/* [TODO] create other direcction */
+.btn--direction {
+  padding: 15px 20px 15px 15px;
+  background-color: #fbfafa;
+  border-radius: 5px 0 0 5px;
+  border-left: 1px solid #d7dfe1;
+  text-transform: capitalize;
+  color: #2c3e50;
+}
+
+/* ______________________________: Inputs Aspects :____________________________ */
+.input-text{
+  width: 100%;
+  border: 1px solid #dee6e6;
+  border-radius: 3px;
+  padding: 20px 0 20px 20px;
+  box-shadow: inset 0 4px 0.5em rgba(0, 0, 0, 0.03);
+  margin-bottom: 20px;
+}
+
+::placeholder {
+  color: #a1b1bc;
+}
+
+/* ////////////////////////////// MEDIA QUERIES /////////////////////////////// */
+@media (max-width: 50em) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-content,
+  .selects-features,
+  .why-us-content,
+  .why-us img {
+    grid-column: 2/4;
+  }
+
+}
